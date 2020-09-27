@@ -1,0 +1,51 @@
+{
+  "name": "@larsroettig/contentful",
+  "version": "0.0.1",
+  "main": "src/intercept.js",
+  "author": "Lars Roettig",
+  "license": "MIT",
+  "pwa-studio": {
+    "targets": {
+      "intercept": "src/intercept.js"
+    }
+  },
+  "scripts": {
+    "prettier": "prettier --loglevel warn --ignore-path .gitignore 'src/**/*.@(css|graphql|js)' '*.js'",
+    "prettier:check": "yarn run -s prettier -- --check",
+    "prettier:fix": "yarn run -s prettier -- --write",
+    "lint": "eslint --ignore-path .gitignore 'src/**/{*.js,package.json}'"
+  },
+  "peerDependencies": {
+    "@magento/pwa-buildpack": "~6.0.0",
+    "react": "~16.9.0",
+    "react-router-dom": "~5.1.0"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "chakra-ui-markdown-renderer": "^0.2.0",
+    "emotion-theming": "^10.0.27",
+    "react-contentful": "^2.0.27",
+    "react-markdown": "^4.3.1"
+  },
+  "devDependencies": {
+    "@magento/eslint-config": "latest",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-package-json": "^0.1.4",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "prettier": "^1.9.2",
+    "prettier-check": "^2.0.0",
+    "husky": "^4.3.0",
+    "babel-eslint": "~10.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier:check && yarn lint",
+      "pre-push": "yarn prettier:check && yarn lint"
+    }
+  }
+}
