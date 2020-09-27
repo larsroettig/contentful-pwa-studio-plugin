@@ -6,10 +6,10 @@
 2. `cd your_project`
 3. `git clone git@github.com:larsroettig/contentful-pwa-studio-plugin.git`
 4.  add `your_project/package.json`
-    ```
+    ```json
     "dependencies": {
     "@larsroettig/contentful": "link:./contentful-pwa-studio-plugin"
-    },
+    }
     ```
 6. run `yarn install`
 
