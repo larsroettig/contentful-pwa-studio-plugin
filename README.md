@@ -15,4 +15,5 @@
 
 
 **Watch stream recording:**
+
 [![Lets build PWA Studio Blog Extension](https://img.youtube.com/vi/PB_uBFHR4to/0.jpg)](https://www.youtube.com/watch?v=PB_uBFHR4to)
